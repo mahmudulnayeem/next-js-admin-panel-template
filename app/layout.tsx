@@ -1,10 +1,14 @@
 "use client"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import { ThemeProvider } from "next-themes"
+// eslint-disable-next-line import/order
 import { Inter } from "next/font/google"
 
+import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { Toaster } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import ThemeDataProvider from "@/context/theme-data-provider"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -19,10 +23,15 @@ export default function RootLayout({
     <html lang="en">
       <QueryClientProvider client={queryClient}>
         <body className={inter.className}>
-          <main>
-            <TooltipProvider>{children}</TooltipProvider>
-          </main>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+            <ThemeDataProvider>
+              <main>
+                <TooltipProvider>{children}</TooltipProvider>
+              </main>
+            </ThemeDataProvider>
+          </ThemeProvider>
           <Toaster />
+          <TailwindIndicator />
           <ReactQueryDevtools initialIsOpen={false} />
         </body>
       </QueryClientProvider>
