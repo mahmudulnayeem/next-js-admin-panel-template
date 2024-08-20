@@ -1,0 +1,6 @@
+.next
+node_modules
+@/components/ui
+report-bundle-size.js
+charts
+**/*.yaml

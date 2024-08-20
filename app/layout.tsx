@@ -1,18 +1,19 @@
-"use client";
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { Inter } from "next/font/google";
-import "./globals.css";
+"use client"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] });
+import { Toaster } from "@/components/ui/sonner"
+import { TooltipProvider } from "@/components/ui/tooltip"
+import "./globals.css"
 
-const queryClient = new QueryClient();
+const inter = Inter({ subsets: ["latin"] })
+
+const queryClient = new QueryClient()
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -26,5 +27,5 @@ export default function RootLayout({
         </body>
       </QueryClientProvider>
     </html>
-  );
+  )
 }

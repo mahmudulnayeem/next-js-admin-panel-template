@@ -1,3 +1,74 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:storybook/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "testing-library/prefer-screen-queries": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "import/order": [
+      2,
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": [
+          "builtin",
+          "index",
+          "external",
+          "internal",
+          "sibling",
+          "parent",
+          "type"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/prop-types": "off",
+    "react/jsx-key": [
+      "error",
+      {
+        "checkFragmentShorthand": true,
+        "checkKeyMustBeforeSpread": true
+      }
+    ],
+
+    "react/jsx-no-useless-fragment": [
+      "error",
+      {
+        "allowExpressions": true
+      }
+    ]
+  },
+  "settings": {
+    "tailwindcss": {
+      "callees": ["clsx", "cva", "cn"]
+    }
+  }
 }
