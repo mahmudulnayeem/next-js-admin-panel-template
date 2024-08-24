@@ -1,9 +1,16 @@
 import Image from "next/image"
 
+import AdminPanelPagination from "@/components/custom-pagintaion"
 import { ThemeColorToggle } from "@/components/theme-color-toggle"
 import { ThemeModeToggle } from "@/components/theme-mode-toggle"
 
-export default function Home() {
+export default function Home({
+  searchParams,
+}: {
+  searchParams: {
+    page: string
+  }
+}) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -138,7 +145,7 @@ export default function Home() {
           </p>
         </a>
       </div>
-      {/* <Pagination /> */}
+      <AdminPanelPagination currentPage={searchParams.page} totalPages={9} />
     </main>
   )
 }
