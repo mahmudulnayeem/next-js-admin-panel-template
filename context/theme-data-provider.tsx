@@ -4,7 +4,7 @@ import { ThemeProviderProps } from "next-themes/dist/types"
 import { createContext, useContext, useLayoutEffect, useState } from "react"
 
 import setGlobalColorTheme from "@/lib/theme-colors"
-import { ThemeColors, ThemeColorStateParams } from "@/types/theme-types"
+import { ThemeColors, ThemeColorStateParams } from "@/types/theme.types"
 
 const ThemeContext = createContext<ThemeColorStateParams>({} as ThemeColorStateParams)
 

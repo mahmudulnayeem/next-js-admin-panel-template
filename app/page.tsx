@@ -138,6 +138,7 @@ export default function Home() {
           </p>
         </a>
       </div>
+      {/* <Pagination /> */}
     </main>
   )
 }
