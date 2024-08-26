@@ -17,7 +17,7 @@ interface AdminPanelPaginationProps {
   totalPages: number
   windowSize?: number
 }
-const AdminPanelPagination = ({ currentPage, totalPages, windowSize = 5 }: AdminPanelPaginationProps) => {
+const AdminPanelPagination = ({ currentPage, totalPages, windowSize = 4 }: AdminPanelPaginationProps) => {
   const searchParams = useSearchParams()
   const pathname = usePathname()
 

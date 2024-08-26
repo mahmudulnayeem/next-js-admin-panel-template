@@ -3,6 +3,8 @@ import Image from "next/image"
 import AdminPanelPagination from "@/components/custom-pagintaion"
 import { ThemeColorToggle } from "@/components/theme-color-toggle"
 import { ThemeModeToggle } from "@/components/theme-mode-toggle"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 
 export default function Home({
   searchParams,
@@ -55,97 +57,29 @@ export default function Home({
         />
       </div>
 
-      <div
-        className="mb-32 grid gap-x-2 text-center lg:mb-0 lg:w-full lg:max-w-5xl
-          lg:grid-cols-4 lg:text-left"
-      >
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border bg-card px-5 py-4 transition-colors
-            hover:border-gray-300 hover:bg-gray-100 dark:border-white
-             hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold text-primary">
-            Docs{" "}
-            <span
-              className="inline-block transition-transform group-hover:translate-x-1
-                motion-reduce:transform-none"
-            >
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border bg-card px-5 py-4 transition-colors
-            hover:border-gray-300 hover:bg-gray-100 dark:border-white
-             hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold text-primary">
-            Learn{" "}
-            <span
-              className="inline-block transition-transform group-hover:translate-x-1
-                motion-reduce:transform-none"
-            >
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border bg-card px-5 py-4 transition-colors
-            hover:border-gray-300 hover:bg-gray-100 dark:border-white
-       hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold text-primary">
-            Templates{" "}
-            <span
-              className="inline-block transition-transform group-hover:translate-x-1
-                motion-reduce:transform-none"
-            >
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border bg-card px-5 py-4 transition-colors
-            hover:border-gray-300 hover:bg-gray-100 dark:border-white
-       hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold text-primary">
-            Deploy{" "}
-            <span
-              className="inline-block transition-transform group-hover:translate-x-1
-                motion-reduce:transform-none"
-            >
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="mb-32">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-primary">Next.js Admin Panel</CardTitle>
+            <CardDescription className="text-foreground">
+              A Next.js Admin Panel Template with Tailwind CSS, TypeScript, and Shade-cn ui
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex justify-between gap-5 flex-col">
+            <div>
+              <h3 className="text-lg font-semibold">Get Started</h3>
+              <p>Get started by editing app/page.tsx</p>
+            </div>
+            <div>
+              <Link href="/components" className="text-lg font-semibold text-primary hover:underline group ">
+                See components{" "}
+                <span className="inline-block transform transition-transform group-hover:translate-x-1 ">&rarr;</span>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
       </div>
-      <AdminPanelPagination currentPage={searchParams.page} totalPages={9} />
+      <AdminPanelPagination currentPage={searchParams.page} totalPages={19} />
     </main>
   )
 }
