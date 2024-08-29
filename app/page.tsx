@@ -4,7 +4,6 @@ import AdminPanelPagination from "@/components/custom-pagintaion"
 import { ThemeColorToggle } from "@/components/theme-color-toggle"
 import { ThemeModeToggle } from "@/components/theme-mode-toggle"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Link from "next/link"
 
 export default function Home({
   searchParams,
@@ -69,12 +68,6 @@ export default function Home({
             <div>
               <h3 className="text-lg font-semibold">Get Started</h3>
               <p>Get started by editing app/page.tsx</p>
-            </div>
-            <div>
-              <Link href="/components" className="text-lg font-semibold text-primary hover:underline group ">
-                See components{" "}
-                <span className="inline-block transform transition-transform group-hover:translate-x-1 ">&rarr;</span>
-              </Link>
             </div>
           </CardContent>
         </Card>
