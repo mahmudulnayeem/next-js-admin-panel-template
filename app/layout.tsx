@@ -9,8 +9,8 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { Toaster } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import ThemeDataProvider from "@/context/theme-data-provider"
+import { GoogleTagManager } from "@next/third-parties/google"
 import "./globals.css"
-
 const inter = Inter({ subsets: ["latin"] })
 
 const queryClient = new QueryClient()
@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <QueryClientProvider client={queryClient}>
+        <GoogleTagManager gtmId="G-2WYR8S191X" />
         <body className={inter.className}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
             <ThemeDataProvider>
