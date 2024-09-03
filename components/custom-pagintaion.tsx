@@ -1,4 +1,7 @@
 "use client"
+import { usePathname, useSearchParams } from "next/navigation"
+import { useCallback } from "react"
+
 import {
   Pagination,
   PaginationContent,
@@ -9,8 +12,6 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 import getPagination from "@/lib/pagintaion"
-import { usePathname, useSearchParams } from "next/navigation"
-import { useCallback } from "react"
 
 interface AdminPanelPaginationProps {
   currentPage: number | string

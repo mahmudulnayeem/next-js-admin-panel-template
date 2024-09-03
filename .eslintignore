@@ -4,3 +4,4 @@ node_modules
 report-bundle-size.js
 charts
 **/*.yaml
+Dockerfile

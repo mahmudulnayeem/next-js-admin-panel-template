@@ -4,7 +4,6 @@
     "prettier",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:storybook/recommended",
     "plugin:tailwindcss/recommended"
   ],
   "plugins": ["@typescript-eslint"],
@@ -36,15 +35,7 @@
           "caseInsensitive": true,
           "order": "asc"
         },
-        "groups": [
-          "builtin",
-          "index",
-          "external",
-          "internal",
-          "sibling",
-          "parent",
-          "type"
-        ],
+        "groups": ["builtin", "index", "external", "internal", "sibling", "parent", "type"],
         "newlines-between": "always"
       }
     ],

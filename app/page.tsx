@@ -35,7 +35,7 @@ export default function Home({
       </div>
 
       <div
-        className="before:bg-gradient-radial after:bg-gradient-conic relative z-[-1] flex place-items-center
+        className="relative z-[-1] flex place-items-center
           before:absolute before:h-[300px] before:w-full
           before:-translate-x-1/2 before:rounded-full before:from-white
           before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20
@@ -64,7 +64,7 @@ export default function Home({
               A Next.js Admin Panel Template with Tailwind CSS, TypeScript, and Shade-cn ui
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex justify-between gap-5 flex-col">
+          <CardContent className="flex flex-col justify-between gap-5">
             <div>
               <h3 className="text-lg font-semibold">Get Started</h3>
               <p>Get started by editing app/page.tsx</p>
